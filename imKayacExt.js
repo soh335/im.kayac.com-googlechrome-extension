@@ -8,7 +8,6 @@
         var type = localStorage.type;
         var value = localStorage.value;
 
-        console.log(user, type, value);
         if ( ! user || ! type ) {
             notify("don't have setting");
         }

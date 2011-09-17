@@ -60,7 +60,6 @@ imKayac || (function() {
     }
 
     function secretkey(params, value) {
-        //params.sig = CybozuLabs.SHA1.calc(params.message + value, CybozuLabs.SHA1.BY_UTF16);
         params.sig = hex_sha1(params.message + value);
     }
 

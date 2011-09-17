@@ -47,7 +47,6 @@ imKayac || (function() {
             var func = paramFunc[type];
             func && func(params, this.value);
 
-            console.log(params);
             xhr.send(buildQuery(params));
         }
         catch (e) {

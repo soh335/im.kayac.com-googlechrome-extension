@@ -36,7 +36,7 @@ chrome.extension.onRequest.addListener(
         parentId: id,
         onclick: function(info, tab) {
             imKayac.send({
-                message: tab.url,
+                message: tab.title || tab.url,
                 handler: tab.url,
             });
         }
@@ -67,7 +67,7 @@ chrome.extension.onRequest.addListener(
 
     chrome.browserAction.onClicked.addListener(function(tab) {
         imKayac.send({
-            message: tab.url,
+            message: tab.title || tab.url,
             handler: tab.url
         });
     });

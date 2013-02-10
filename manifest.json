@@ -2,14 +2,16 @@
     "name": "im.kayac.com-googlechrome-extension",
     "version": "0.0.2",
     "description": "",
-    "permissions": [ 
-        "tabs", 
-        "permissions",
+    "permissions": [
+        "tabs",
         "contextMenus",
         "notifications",
-        "http://im.kayac.com/" 
+        "http://im.kayac.com/"
     ],
-    "background_page": "background.html",
+    "background": {
+        "scripts": ["sha1-min.js", "imKayac.js", "imKayacExt.js", "background.js"],
+        "persistent": true
+    },
     "browser_action": {
         "default_icon": "48.png",
         "default_title": "im.kayac.com"
@@ -23,5 +25,6 @@
     "icons": {
         "48": "48.png",
         "128": "128.png"
-    }
+    },
+    "manifest_version": 2
 }
